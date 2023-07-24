@@ -1,0 +1,117 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: none;
+}
+
+:root {
+    --color-primary: #2093ff;
+    --color-secundary:#fff;
+    --color-Terceary:#000;
+  
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('./fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('./fonts/Raleway-Light.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+.container-navbar{
+    background-color:var(--color-Terceary);
+}
+.logo{
+    text-align: center;
+    text-decoration: none;
+    font-size:2rem;
+    padding: 20px 0px 0px 0px;
+   
+}
+.logo a{
+    color: var(--color-secundary);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+.logo span{
+    color: var(--color-primary);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 26px 8px;
+  }
+
+  .list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+  }
+  .list li {
+    margin: 0 10px;
+    
+  }
+  .list li a{
+    color:var(--color-secundary);
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'Raleway';
+   
+}
+.list li a:hover{
+  color: var(--color-primary);
+}
+ 
+@media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+    .list {
+      flex-direction: column;
+      align-items: center;
+      display: none;
+    }
+    .list.show {
+      display: flex;
+    }
+    .menu-icon {
+      display: block;
+      margin-left: auto; 
+      margin-right: 20px; 
+      color: var(--color-primary);
+    }
+   
+  }
+  
+  
+  
+  /* Estilos para el menú en pantalla completa */
+  @media (min-width: 769px) {
+    /* Ocultar el ícono en pantalla completa */
+    .menu-icon {
+      display: none;
+    }
+  
+    /* Centrar la información en el menú */
+    .list {
+      justify-content: center;
+    }
+   
+  }
+  
